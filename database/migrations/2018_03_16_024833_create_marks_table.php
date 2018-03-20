@@ -18,7 +18,7 @@ class CreateMarksTable extends Migration
             $table->double('php');
             $table->double('mySQl');
             $table->double('java');
-            $table->integer('student_id')->unsigned()->unique();
+            $table->integer('student_id')->unsigned();
             $table->foreign('student_id')->references('id')->on('students');
             $table->timestamps();
         });

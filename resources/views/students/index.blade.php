@@ -2,19 +2,19 @@
 
 @section('content')
 <div class="container">
-<h3>Danh sách sinh viên của lớp  </h3>
+<h3>Danh sách sinh viên</h3>
 
 <form action="/students/search", method="GET">
-    <a class="btn btn-success btn-sm mb-3" href="/students/create" role="button"><i class="fas fa-plus"></i> Add new student</a>
+    <a class="btn btn-success btn-sm mb-3 mt-3" href="/students/create" role="button"><i class="fas fa-plus"></i> Add new student</a>
     
     <div class="input-group">
-            <input class="form-control col-3" type="text" placeholder="Search for..." class="name">
+            <input class="form-control col-3" type="text" placeholder="Search for..." name="name">
             <span class="input-group-append">
-              <button class="btn btn-success" type="button">
-                <i class="fa fa-search"></i>
-              </button>
+                <button class="btn btn-success" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
             </span>
-          </div>
+    </div>
         
 </form>
 <br>

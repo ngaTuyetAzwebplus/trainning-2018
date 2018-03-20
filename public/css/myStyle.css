@@ -436,3 +436,11 @@ html {
   .card-register {
     max-width: 40rem;
   } */
+
+  .logo{
+    width: 100px;
+    height: 40px;
+    object-fit:cover;
+    /* margin-left: 20px; */
+    margin-top: 5px;
+  }

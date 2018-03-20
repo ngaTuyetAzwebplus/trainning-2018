@@ -1,28 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.flat')
 
 @section('content')
 <div class="container">
-    <h1>Them moi sinh vien</h1>
+    <h1>Sửa thông tin sinh viên</h1>
 <form method="POST" action="/students/{{$student->id}}">
         @csrf
         <input name="_method" type="hidden" value="PUT">
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">Ten</label>
-
-            <div class="col-md-6">
-            <input id="name" type="text" name="name" value="{{$student->name}}">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">Tuoi</label>
-
-            <div class="col-md-6">
-                <input id="name" type="text" name="age" value="{{$student->age}}">
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input id="name" type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="nhập tên " value="{{$student->name}}">
         </div>
         <div class="form-group">
-               <label for="group"><b>Group</b></label>
-               <select name="group" id="group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input  id="age" type="text" name="age" class="form-control" id="exampleFormControlInput1" placeholder="nhập tên " value="{{$student->age}}">
+        </div>
+      
+        <div class="form-group">
+               <label for="group">Group</label>
+               <select class="form-control" name="group" id="group">
                @foreach($groups as $group)
                     @if($group->id == $student->group->id)
                        <option  value="{{$group->id}}" selected >{{$group->name}}</option>
@@ -33,13 +28,9 @@
                
                </select>
         </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Save') }}
-                </button>
-            </div>
-        </div>
+        <button type="submit" class="btn btn-success">
+                <i class="fas fa-save mr-2"></i>    {{ __('Save') }}
+        </button>
     </form>
 </div>
 @endsection

@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.flat')
 
 @section('content')
 <div class="container">
-    <h1>Them moi sinh vien</h1>
+    <h1>Thêm mới sinh viên</h1>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -14,37 +14,29 @@
    @endif
     <form method="POST" action="/students">
         @csrf
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">Ten</label>
-
-            <div class="col-md-6">
-                <input id="name" type="text" name="name">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">Tuoi</label>
-
-            <div class="col-md-6">
-                <input id="name" type="text" name="age">
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Nhập tên:</label>
+                <input type="text"  name="name" id="name" class="form-control col-6" id="exampleFormControlInput1" placeholder="Nhập tên">
         </div>
         <div class="form-group">
-               <label for="group"><b>Group</b></label>
-               <select name="group" id="group">
-                    <option value="">--chon--</option>
-                   @foreach($groups as $group)
-                   
-                       <option value="{{$group->id}}">{{$group->name}}</option>
-                   @endforeach
-               </select>
+                <label for="exampleFormControlInput1">Nhập tuổi:</label>
+                <input type="text"  name="age" id="age" class="form-control col-4" id="exampleFormControlInput1" placeholder="Nhập tuổi">
         </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Save') }}
+        <div class="form-group">
+                <label for="exampleFormControlSelect1">Lớp</label>
+                <select name="group" id="group" class="form-control col-4" id="exampleFormControlSelect1">
+                        <option value="">--Chọn--</option>
+                        @foreach($groups as $group)
+                        
+                            <option value="{{$group->id}}">{{$group->name}}</option>
+                        @endforeach
+                </select>
+              </div>
+        
+                <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> {{ __('Save') }}
                 </button>
-            </div>
-        </div>
+        
     </form>
 </div>
 @endsection

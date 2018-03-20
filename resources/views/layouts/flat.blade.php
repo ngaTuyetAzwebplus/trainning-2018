@@ -16,13 +16,14 @@
   <!-- Custom styles for this template-->
   <link href="{{ asset('css/myStyle.css') }}" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body class="fixed-nav" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light  bg-white fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand" href="index.html"><img class="logo" src="https://www.edtechteam.com/wp-content/uploads/2017/09/1.png" alt=""></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
       aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,9 +31,9 @@
     <div class="collapse navbar-collapse bg-white" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="/">
               <i class="fas fa-tachometer-alt text-success"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text">Trang chủ</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
@@ -42,13 +43,18 @@
           </a>
         </li>
 
-        
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="/students">
             <i class="fa fa-fw fa-table text-success"></i>
             <span class="nav-link-text">Sinh viên</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="/marks">
+              <i class="fas fa-bookmark text-success"></i>
+              <span class="nav-link-text">Điểm sinh viên</span>
+            </a>
+          </li>
 
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -72,16 +78,16 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="login.html">Login Page</a>
+              <a href="#">Login Page</a>
             </li>
             <li>
-              <a href="register.html">Registration Page</a>
+              <a href="#">Registration Page</a>
             </li>
             <li>
-              <a href="forgot-password.html">Forgot Password Page</a>
+              <a href="#">Forgot Password Page</a>
             </li>
             <li>
-              <a href="blank.html">Blank Page</a>
+              <a href="#">Blank Page</a>
             </li>
           </ul>
         </li>
@@ -244,6 +250,7 @@
     crossorigin="anonymous"></script>
   <!-- Custom scripts for all pages-->
   <script src="{{ asset('js/admin.js') }}" defer></script>
+  <script src="{{ asset('js/chart.js') }}" defer></script>
   <!-- Custom scripts for this page-->
   
   </div>

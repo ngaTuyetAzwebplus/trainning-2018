@@ -71,7 +71,6 @@ class GroupController extends Controller
     public function edit($id)
     {
         $group = Group::find($id);
-       
         
         return view("groups.edit")->with('group',$group);
     }

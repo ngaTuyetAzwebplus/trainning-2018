@@ -38,23 +38,28 @@ class MarkController extends Controller
      */
     public function store(Request $request)
     {
-        
+        try {
         $php = $request->input('php');
         $mySQl = $request->input('mySQl');
         $java = $request->input('java');
         $student_id = $request->input('id');
+        } 
+        catch (Exception $e)
+         {
+        return 'ko nhap dc';
+                }
         
         $mark = new Mark();
-        if($student_id==$mark->$student_id){
-            return'Sinh vien nay da co diem';
-        }
-        else{
+        
         $mark->php = $php;
         $mark->mySQl = $mySQl;
         $mark->java = $java;
         $mark->student_id = $student_id;
         $mark->save();
-        return redirect('/marks');}
+        return redirect('/marks');
+
+       
+       
     }
 
     /**

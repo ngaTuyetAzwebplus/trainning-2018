@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Nhap diem sinh vien</h1>
+    <h3>Nhập điểm sinh viên</h3>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -14,35 +14,24 @@
    @endif
     <form method="POST" action="/marks">
         @csrf
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">Ten</label>
-
-            <div class="col-md-6">
-            <input name="student" type="text" value="{{$student->name}}" readonly="False"> 
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Tên</label>
+                <input type="text" class="form-control bg-white col-3" name="student" type="text" value="{{$student->name}}" readonly="False">
         </div>
         <input name="id" type="hidden" value="{{$student->id}}" readonly="False">
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">php</label>
-
-            <div class="col-md-6">
-                <input id="php" type="text" name="php">
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Điểm php</label>
+                <input  id="php" type="text" name="php" class="form-control col-6" id="exampleFormControlInput1">
         </div>
-        <div class="form-group row">
-            <label for="mySQl" class="col-md-4 col-form-label text-md-right">Sql</label>
-
-            <div class="col-md-6">
-                <input id="mySQl" type="text" name="mySQl">
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Điểm mySQL</label>
+                <input  id="mySQl" type="text" name="mySQl" class="form-control col-6" id="exampleFormControlInput1">
         </div>
-        <div class="form-group row">
-            <label for="java" class="col-md-4 col-form-label text-md-right">java</label>
-
-            <div class="col-md-6">
-                <input id="java" type="text" name="java">
-            </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Điểm Java</label>
+                <input  id="java" type="text" name="java" class="form-control col-6" id="exampleFormControlInput1">
         </div>
+     
         {{--  <div class="form-group">
                <label for="group"><b>Group</b></label>
                <select name="group" id="group">
@@ -53,13 +42,11 @@
                    @endforeach
                </select>
         </div>  --}}
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Save') }}
+      
+                <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save mr-2"></i>  {{ __('Save') }}
                 </button>
-            </div>
-        </div>
+            
     </form>
 </div>
 @endsection
