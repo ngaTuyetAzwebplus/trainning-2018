@@ -32,6 +32,7 @@ class StudentController extends Controller
         return view("students.create")->with('groups',$groups);
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -107,7 +108,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $student = Student::find($id);
+       $student = Student::find($id);
        $student->name     = Input::get('name');
        $student->age      = Input::get('age');
        $student->group_id = Input::get('group');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Group;
 use Illuminate\Http\Request;
 use App\Student;
+use App\Mark;
 use Illuminate\Support\Facades\Input;
 class GroupController extends Controller
 {
